@@ -14,8 +14,8 @@ for (let i = 0; i < data.length - 1; i += 4) {
     break;
   }
 
-  if (opcode == 1) data[loc] = data[pos1] + data[pos2];
-  if (opcode == 2) data[loc] = data[pos1] * data[pos2];
+  if (opcode == 1) data[loc] = +data[pos1] + +data[pos2];
+  if (opcode == 2) data[loc] = +data[pos1] * +data[pos2];
 }
 
 console.log(data.join(","));
